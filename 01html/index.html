@@ -1,0 +1,262 @@
+<!-- 
+    HTML (Hypertext markup language)
+    En este lenguaje usa etiquetas
+        {        Daniel       }
+    <etiqueta> Contenido </etiqueta>
+    las etiquetas tienen atributos
+    <etiquta atributo="valor"> Contenido </etiqueta>
+
+    los atributos cambian el comportamiento de las etiquetas
+    <h1 class="uno" Hola </h1>
+ 
+    las paginas tienen una estructura: cabecera, cuerpo, pie
+-->
+<!DOCTYPE HTML>
+<html lang="es"><!--lenguaje español-->
+    <!-- 
+        Cabecera: se ubica los metadatos o datos no visibles dentro del
+        cuerpo visual de la pagina
+
+        style estilos
+        script comportamiento, cargar o ejecutar un script
+        base url de documentos
+    -->
+    <meta charset="utf-8"/>
+    <meta name="autor" contents="Hernan Ordonez"/>
+    <meta name="keywords" contents="web, primera, hernan, 1, 2, 3..."/>
+    <meta name="copyright" contents="Derechos de autor - Hernan ordonez"/> 
+    <link rel="shorcut icon" href="web.ico">
+    <head>
+        <title>Mi pagina web</title>
+    </head>
+    <!-- 
+        En el body se coloca todos los elementos a mostrar
+    -->
+    <body>
+        <h1>Mi pagina web</h1>
+        <h2>Hola bienvenido</h2>
+        <!-- 
+            Las etiquetas h son para titulos
+            existen hasta la h6
+            en toda pagina debe haber solo un h1
+
+            todo lo que existe en una pagina web es texto
+            texto estatico o dinamico
+        -->
+        <h2>Textos</h2>
+        <p>Hola 1</p>
+        <p>Hola 2</p>
+        <!-- Usamos lorem ipsum para generar textos -->
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
+        </p>
+        <hr>
+        <!--
+            Salto de linea con br o con hr 
+            cuando una etiqueta no se cierra se conoce como
+            huerfana
+        -->
+        <p>
+            Lorem Ipsum is simply dummy text<br/>of the printing and typesetting industry.<br/>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        </p>
+        <p>
+            Lorem <b><u>Ipsum</u></b> is simply <u>dummy</u> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            <cite>Daniel Veloz</cite>
+            <br/>
+            10m<sub>2</sub>
+            <br/>
+            10m<sub>2</sub>
+        </p>
+        <p>
+            <strong>Lorem Ipsum</strong> is simply dummy <em>text of the</em> printing and <i>typesetting</i> industry. <code>Ipsum has been the industry's</code> standard dummy text ever since the 1500s.
+            <span>Este es un texto de prueba</span>
+        </p>
+        <h2>Imagenes</h2>
+        <!-- 
+            alt texto alternativo
+            title titulo de la imagen
+            src la ruta de la imagen
+                ruta relativa donde nos encontramos -> imagenes/auto.jpg -> recomendable
+                ruta absoluta toda la ruta donde se encuentra la imagen
+                    D:/AplicacionesWeb/01html/imagenes/auto.jpg -> no recomendable
+            tamaño de la imagen alti/ancho width height
+            recomendable solo tocar uno de ellos
+            px -> pixel
+        -->
+        <img
+            alt="Auto"
+            title="Foto de auto"
+            src="imagenes/auto.jpg"
+            width=""
+            height="200px"
+        />
+        <img
+            alt="Auto"
+            title="Foto de auto"
+            src="imagenes/auto.jpg"
+            width=""
+            height="200px"
+        />
+        <h2>Contenido externo</h2>
+        <!--
+            Permite incrusta contenido externo
+            embed incrustar contenido interactivo
+            objet incrustar con fallbacks
+        -->
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/NPZBnHetM5U"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        >
+        </iframe>
+        <iframe
+            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FElCanalDFutbol%2Fvideos%2F983096812273531%2F&show_text=false&width=560&t=0"
+            width="560"
+            height="314"
+            style="border:none;overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"  
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowFullScreen="true"
+        >
+        </iframe>
+        <h2>Video</h2>
+        <!--
+            src
+            poster
+            preload
+            mediagroup
+            autoplay
+            loop
+            muted
+            controls
+            width
+            height
+            formatos: mp4, webm, av1, hevc, ogv, mkv, avi
+        -->
+        <video
+            src="video/ruletarusa.mp4#t=45"
+            controls
+            width="560"
+            height="324">
+        >
+        </video>
+        <h2>Audio</h2>
+        <!--
+            Fromatos: mp3, aac, oog, opus, flac, wav
+        -->
+        <audio 
+            src="audio/Entre Nosotros.mp3"
+            controls
+        >
+        </audio>
+        <audio controls>
+            <source src="audio/Entre Nosotros.mp3">
+            <source src="audio/Entre Nosotros.mp3">
+            <source src="audio/Entre Nosotros.mp3">
+        </audio>
+        <h2>Listas</h2>
+        <!--
+            Ordenadas ol -> ordenaded list
+            desornedanas ul -> unordened list
+        -->
+        <ol>
+            <li>Sistemas</li>
+            <li>Mecanica</li>
+            <li>Civil</li>
+            <li>
+                ESFOT
+                <ul>
+                    <li>ASI</li>
+                    <li>ASA</li>
+                    <li>MEC</li>
+                </ul>
+            </li>
+            <li>Administracion</li>
+        </ol>
+        <h2>Tablas</h2>
+        <table border="1">
+            <thead>
+                <caption>Mi tabla</caption>
+                <tr>
+                    <th rowspan="2">No.</th>
+                    <th>Nombre</th>
+                    <th>Provincia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td colspan="2">Daniel Villagomez</td>
+                    <td>Pichincha</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Luis</td>
+                    <td>Azuay</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Luis</td>
+                    <td>Azuay</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Luis</td>
+                    <td>Azuay</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Formularios</h2>
+        <!--
+            action url de funcion accion de backend
+            method 
+            name
+            target
+            enctype
+            accept-charset
+            autocomplete
+            novalidate
+        -->
+        <form action="">
+            <p>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" placeholder="Escribe tu nombre">
+            </p>
+            <p>
+                <label for="descripcion">Nombre</label>
+                <textarea name="descripcion"></textarea>
+            </p>
+            <p>
+                <input type="radio" name="genero" placeholder="Masculino">Masculino
+                <input type="radio" name="genero" placeholder="Femenino">Masculino
+            </p>
+            <p>
+                <select">
+                    <option name="genenero" value="masculino">M</option>
+                    <option name="genenero" value="femenino">F</option>
+                    <option name="genenero" value="otro">O</option>
+                </select>
+            </p>
+            <p>
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contrasenia" placeholder="Escribe tu contraseña">
+            </p>
+            <p>
+                <label for="imagen">Imagen</label>
+                <input type="file">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        </form>
+
+    </body>
+    <footer>
+    </footer>
+</html>

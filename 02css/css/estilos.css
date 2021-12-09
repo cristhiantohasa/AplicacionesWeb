@@ -1,0 +1,244 @@
+/*
+    CSS define una serie de terminos que permiten describir cada una
+    de las partes que componen los estilos CascadeStylleSheet
+
+    compone de un estilo CSS basico
+    |<------------------------------------------------->| regla CSS
+    |<-> selector
+        |<...........................................>| declaracion
+        |<---->| propiedad
+            |<--->| valor
+    En CSS3 se incluye 239 propiedades
+*/
+h1{
+    color: red;
+    font-family: Arial;
+}
+/*
+    Regla @media permite indicar de forma directa el medio o medios en los que
+    se aplicaran los estilos
+    @media screen {body font-size:13px}
+    para enlazar archivos externos
+    @import url(estilos2.css) screen;
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    @media print {estilos especificos para impresora}
+*/
+@font-face {
+    font-family: "comforter";
+    src: url(font/ComforterBrush-Regular.ttf);
+}
+/*
+    Selectores
+    Universal
+    Eliminar el margen y el relleno
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*
+    Selector de tipo o etiqueta
+*/
+nav{
+    color: blue;
+    font-size: 25px;
+    font-family: comforter;
+}
+/*
+    Selector descendente elementos dentro de otros elementos
+*/a
+article{
+    font-family: Verdana;
+    font-size: 20px;
+}
+article span{
+    color: red;
+}
+article a {
+    color: black;
+    text-decoration: none;
+    background-color: brown;
+}
+/*
+    Selector de clase
+    Permite aplicar estilos mediante el atributo class
+    sobre un elemento html
+*/
+.destacado{
+    color: rosybrown;
+    font-family: comforter;
+    font-size: 30px;
+}
+.error{
+    color: red;
+    font-weight: bold;
+}
+.alerta{
+    padding: 5px;
+    border: 1px solid black;
+    background: blueviolet;
+}
+p.destacado{ /*Aquellos elementos del parrafo que tengan la clase destacado*/
+    color: darkorange;
+}
+/*
+    Selector id
+*/
+#destacado{
+    background: hotpink;
+}
+div#destacado{ /* Aquellos elementos dentro del div y que tengan el id destacado*/
+    color: yellow;
+}
+main{
+    background-color: green;
+}
+main section{
+    color: yellow;
+}
+aside{
+    background-color: red;
+    color: white;
+}
+footer{
+    background-color: black;
+    color: white;
+}
+/*
+    Combinaciones de selectores basicos
+    .alerta .especial .destacado{
+
+    }
+    div.alerta span.especial{
+
+    }
+
+    Unidades de medida
+    ---- unidades absolutas
+    in pulgadas
+    cm centimetros
+    mm milimetros
+    pt puntos
+    pc picas
+
+    0.5 in -- .5in es una forma valida
+
+    ---- unidades relativas
+    em no es la etiqueta <em>, relativa al tamaño de letra del elemento
+    ex respecto a la altura de la letra x del tipo y tamaño de la letra del elemento
+    px pixel respecto a la resolucion de la pantalla del dispositivo
+
+    ---- porcentajes
+    se utiliza el %
+    h1{ font-size: 200%; }
+    
+    Colores
+    
+    -- palabras clave en ingles
+    red, blue, white, black, etc
+
+    -- rgb decimal
+    referencia a los colores Red Gren Blue y CYMK
+    valores entre 0 y 255
+    p{ color:rgb( 71,98,196 ) }
+
+    -- rgb porcentual
+    p{ color:rgb( 0%,20%,98% ) }
+
+    -- rgb hexadecimal
+    p{ color:rgb#336699 ) -> p( color:rgb#369 }
+
+    -- colores del sistema
+    establecidos mediante un nombre
+
+    pagina: http://www.psyclops.com/tools/rgb/
+
+    Modelo de cajas
+
+    Conocido como bx model es el comportamiento CSS que hace que todos los elementos de las
+    paginas se representen mediante cajas rectangulares
+
+    las cajas se crean automaticamente, cada vez que se inserta una etiqueta HTML, se crea
+    una nueva caja rectangular
+
+    las cajas no son visibles a simple vista inicialmente no tienen color de fondo ni borde
+    los navegadores los colocan ed forma automatica, pero con CSS es posible modificar sus
+    caracteristicas
+
+    las partes de una caja:
+    contenido ( content ): se trata del contenido HTML
+    relleno ( padding ): espacio libre opcional entre el contenido y el borde
+    borde ( border ): linea que encierra al contenido y su relleno
+    imagen de fondo ( background image ): imagen que se muestra por detras del contenido
+        y el espacio de relleno
+    color de fondo (backgroud color ): color que se muestra por detras del contenido
+        y el espacio de relleno
+        margen ( margin ): separacion entre caja y el resto de cajas adyacentes
+    
+    el relleno y margen son transparentes
+
+    -- Anchura 
+    propiedad width valores: unidades de medida, porcentajes, alto, auto, inherit -> heredar 
+
+    - Altura
+    propiedad height
+    mi-height max height
+
+    -- Margen
+    propiedades margin-top, margin-right, margin-bottom, margin-left
+
+    div{
+        margin-top: 5em;
+    }
+
+    div{
+        margin: 5em 5em 5em 5em;
+    }
+
+    div{
+        margin: 5em;
+        margin-left: 1em;
+    }
+*/
+div{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+/*
+    ---- Relleno
+    propiedades padding-top, padding-right, padding-bottom, padding-left
+
+    ---- Bordes
+    Anchura
+    border-top-width, border-right-width, border-bottom-width, border-left-width
+    Color
+    border-top-color, border-right-color, border-bottom-color, border-left-color
+    Estilo
+    border-top-style, border-right-style, border-bottom-style, border-left-style
+    none | hidden | dotted | solid | double | groove | ridge | insert | outset | inherit
+    Border-style
+    border-top, border-right, border-bottom, border-left
+*/
+div{
+    width: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border: 10px dotted black;
+}
+/*
+    Fondos
+    background-color
+    background-image ->url o ruta de la imagen
+    
+    background-repeat -> valores repeat | repeat-x | repeat-y | no--repeat
+    background-position -> top, center, buttom, left, right
+    background-attachment -> trabajr con una imagen fija con un scroll para mostrar
+    una parte de la imagen
+
+    Posicionamiento
+    position-(top, right, left, bottom), static, relative, absolute, fixed (fijo), inherit
+*/
