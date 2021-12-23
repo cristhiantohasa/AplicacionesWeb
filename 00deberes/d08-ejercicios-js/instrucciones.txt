@@ -1,0 +1,16 @@
+Utilizando JS resolver los siguientes ejercicios:
+1.  Programa que pida dos numeros y que nos diga cual es el mayor, el menor y si son iguales
+    PLUS: Si los numeros no son un numero o son menores o iguales a cero, nos los vuelva a pedir.
+2.  Utilizando un bucle, mostrar la suma y la media de los numeros introducidos
+    hasta introducir un numero negativo y ahí mostrar el resultado.
+3.  Hacer un programa que muestre todos los numeros entre dos numeros introducidos por el usuario.
+4.  Mostrar todos los numeros impares que hay entre dos numeros introducidos por el usuario.
+5.  Muestre todos los numeros divisores de un numero introducido en prompt.
+6.  Programa que nos diga si un numero es par o impar.
+  - Ventana prompt.
+  - Si no es valido que nos pida de nuevo el numero.
+7.  Calculadora:
+  - Pida dos numeros por pantalla.
+  - Si metemos uno mal que nos los vuelva a pedir.
+  - En el cuerpo de la pagina, en una alerta y por la consola el resultado de
+    sumar, restar, multipicar y dividir esas dos cifras.
