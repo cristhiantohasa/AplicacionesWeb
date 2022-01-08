@@ -1,0 +1,126 @@
+html {
+	font-size: 17px;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: white;
+	color: white;
+}
+
+body {
+	background-color: black;
+	color: white;
+}
+
+h1 {
+	color: white;
+}
+
+h2 {
+	color: white;
+}
+
+h3 {
+	color: white;
+}
+
+span {
+	color: black;
+}
+
+.redes-sociales {
+	display: flex;
+	position: fixed;
+	top: 35%;
+	right: 0;
+	font-size: 1.5rem;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+}
+
+.icon {
+	display: flex;
+	padding: .7rem;
+	color: white;
+	text-decoration: none;
+	transition: all .5s;
+}
+
+.icon-arrow-right {
+	color: white;
+}
+.icon-arrow-left {
+	color: white;
+}
+
+.icon-facebook {
+	background: #4267B2;
+}
+
+.icon-instagram {
+	background: #405DE6;
+}
+
+.icon-twitter {
+	background: #1DA1F2;
+}
+
+.icon-whatsapp {
+	background: #128C7E;
+}
+
+.icon-telegram {
+	background: #229ED9;
+}
+
+.icon-youtube {
+	background: #FF0000;
+}
+
+.icon:hover {
+	padding-right: 5rem;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
+/*
+
+	Habitaciones
+
+*/
+#rooms{
+	height: 500px;
+	overflow: hidden;
+}
+
+.carrusel{
+	height: 100%;
+	position: relative;
+}
+
+.tarjetas{
+	height: 100%;
+}
+
+.imagen{
+	width: 1000px;
+	height: 450px;
+	padding: 10px;
+}
+
+.flechas{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}

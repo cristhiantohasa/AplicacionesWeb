@@ -1,0 +1,22 @@
+Cristhian Tohasa - Hotel
+
+Con la temática asignada desarrollar el sitio web que muestre toda
+la información relacionada a sus actividades (valores, clientes,
+productos, promociones, contactos, etc.). El desarrollo debe
+contener al menos 4 ítems en el menú principal y un slider/carousel
+de imágenes en la página principal.
+
+Adicionalmente, el sitio debe ser completamente dinámico
+(responsive, imágenes, vídeos, mapas, etc.) incluyendo los
+respectivos logos, formularios de contacto, ubicación geográfica,
+pie de página con información de contacto del desarrollador y
+enlaces a redes sociales (facebook, youtube, whatsapp, instagram,
+etc.).
+
+Para entregar la solución realice lo siguiente:
+
+Genere las capturas necesarias e inclúyalas en un archivo docx.
+Ubique el documento anterior en un directorio llamado capturas.
+Comprima todo el proyecto generado en un archivo zip.
+El archivo comprimido debe tener el siguiente formato Apellido_Nombre_P_IB_W
+Suba el archivo comprimido.
