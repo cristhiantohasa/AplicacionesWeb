@@ -1,0 +1,68 @@
+/*
+    Reset
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div.row {
+    margin: 0%;
+    padding: 0%;
+}
+
+/*
+    Transbox
+*/
+
+.transbox {
+    margin: 0%;
+    padding: 10px;
+    background-color: rgb(155, 155, 155, 0.7);
+}
+
+/*
+    Header
+*/
+
+header {
+    padding-bottom: 5px;
+}
+
+header.row {
+    margin: 0%;
+}
+
+.header-div {
+    height: 50px;
+    background-color: blue;
+    color: white;
+}
+
+/*
+    Nav
+*/
+
+nav {
+    padding-top: 5px;
+}
+
+nav.row {
+    margin: 0%;
+}
+
+.nav-div {
+    height: 50px;
+    background-color: blue;
+    color: white;
+}
+
+.nav-div td:hover {
+    background-color: lightskyblue;
+}
+
+.nav-div a {
+    color: white;
+    text-decoration: none;
+}

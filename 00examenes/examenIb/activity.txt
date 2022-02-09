@@ -1,0 +1,94 @@
+Instrucciones
+
+Este examen permitirá evaluar el grado de comprensión que ha
+alcanzado hasta el momento, más no el tiempo de respuesta a
+la solución.
+
+Por favor, lea detenidamente las instrucciones.
+
+---------------------------------------------------------------------------------------------------------
+
+1.  Maquetar una web parecida a las imágenes adjuntas con
+    nombre "1. examen.png, 2. examen.png, 3.examen.png …" (10
+    ptos.)
+
+2.  Buscar un plugin de jQuery para hacer un slider (5 ptos.)
+
+3.  En la sección "Inicio" mostrar dinámicamente un listado de 5
+    post almacenado en un json (5 ptos.)
+
+4.  Implementar un cambiador de temas (cambio colores y
+    fondos de la web), utilice las imágenes del archivo adjunto.
+    (5 ptos.)
+
+5.  Implementar un selector de redes sociales (facebook, twitter,
+    youtube e instagram). Cada red social se abre en una nueva
+    página, utilice la imagen del archivo adjunto. (5 ptos.)
+
+6.  Al final de cada página web habrá un botón para subir al
+    principio de la web haciendo una animación en el scroll
+    automático. (5 ptos.)
+
+7.  En cada página web mostrar el formulario de login falso que
+    nos permita guardar en el localstorage el nombre del usuario y
+    en el caso de que exista la “sesión” mostrarla. (5 ptos.)
+
+8.  En la sección “Sobre mí” colocar un acordeón de jquery ui (5
+    ptos.)
+
+9.  En la sección “Reloj” colocar un reloj dinámico con
+    javascript (5 ptos.)
+
+10. En la sección de "Contacto" colocar un formulario de
+    contacto con la respectiva validación (5 ptos.)
+
+11. En la sección "Mis amigos" procesar la información de la
+    siguiente URL: https://rickandmortyapi.com/api/character/?page=3,
+    como se pide a continuación: (10 ptos.)
+
+    1)  Busque los tipos de "name"
+    2)  Busque los tipos de "type"
+    3)  Busque los tipos de "gender"
+    4)  Busque los tipos de "status"
+    5)  Busque los tipos de "name" de origin
+    6)  Busque los tipos de "name" de location
+    7)  Muestre las imágenes de cada elemento con su name, type,
+        gender y url.
+    8)  Cree un arreglo del abecedario, revisar si existe al menos
+        un personaje con cada letra del abecedario.
+
+    Ejemplo de respuesta:
+
+    const arregloRespuesta =[
+        {
+            a:true
+        },
+        {
+            b:false
+        },
+    ];
+    
+    9)  Revisar si todos los personajes tienen un estatus vivo.
+    10) Calcular cuantos episodes existen de cada personaje:
+
+    Ej:
+
+    const respuesta = [
+        ...,
+        {
+            nombre:Rick Sanchez,
+            numeroEpisodios:30
+        },
+        ...
+    ]
+
+12. Bonus: Hacer responsive para al menos 3 tamaños de
+    pantalla sin aplicar bootstrap (8 ptos.)
+
+Para entregar la solución realice lo siguiente:
+
+    Genere las capturas necesarias e inclúyalas en un archivo docx.
+    Ubique el documento anterior en un directorio llamado capturas.
+    Comprima todo el proyecto generado en un archivo zip.
+    El archivo comprimido debe tener el siguiente formato Apellido_Nombre_E_IB_W
+    Suba el archivo comprimido.
