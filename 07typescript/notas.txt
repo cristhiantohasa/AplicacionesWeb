@@ -1,0 +1,13 @@
+Typescript es 100% javascript con nuevas funcionalidades
+Transpilar y convertilo en un JS que funcione en cualquier navegador
+Posee mejoras en POO
+Programar en TS y se traduce a JS puro
+Los archivos son .ts
+Utilizado por angular y node
+Para trabajar es necesario
+    1.  Instalar node
+    2.  Instalar ts
+        npm install -g typescript
+    3.  Version instalada
+        tsc -v
+        tsc 02-hola-mundo.ts

@@ -1,0 +1,21 @@
+/*
+    Prepocesadores de CSS
+        Lo que hace es añadir una capa de funcionalidad CSS
+        los mas importantes
+            SASS: https://sass-lang.com/
+            LESS: https://lesscss.org/
+
+    Instalacion
+        1.  Instalar nodejs para trabajar con la terminal
+        2.  Comprobar la instalacion
+            node -v
+        3.  Instalar sass
+            npm install -g sass //  Instalacion de form global
+        4.  Ver la version instalada
+            sass --version
+
+    1.  Creamos archivo sass estilo.sass
+    2.  Agregamos reglas css
+    3.  Compilamos el archivo sass
+        sass --watch estilo.scss styles.css
+*/
