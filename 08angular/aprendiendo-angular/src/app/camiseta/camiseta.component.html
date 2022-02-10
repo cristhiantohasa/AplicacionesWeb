@@ -1,1 +1,41 @@
-<h1>Hola</h1>
+<h1>{{titulo}}</h1>
+<p>Camisetas disponibles</p>
+<ul>
+    <li *ngFor="let camiseta of camisetas">
+        <span *ngIf="camiseta.precio>=10"
+            [style.color]="camiseta.precio>=12 ? 'green':'red'">
+            Ok</span>
+        {{camiseta.marca}}
+        {{camiseta.color}}
+        {{camiseta.precio}}
+        {{camiseta.stock}}
+    </li>
+</ul>
+<p>Marcas disponibles</p>
+<ul>
+    <li *ngFor="let marca of marcas; let indice =index">
+        {{indice + ' ' + marca}}
+        <button (click)="borrarMarca(indice)">Borrar</button>
+    </li>
+</ul>
+
+<input type="text" [(ngModel)]="miMarca">
+<br>
+<button (click)="getMarca()">Mostrar mi marca</button>
+<button (click)="addMarca()">Agregar marca</button>
+<p>El color mas popular</p>
+<input type="text" [(ngModel)]="color">
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'yellow'">
+        El color popular es <span [ngStyle]="{'background':color}">amarillo</span>
+    </li>
+    <li *ngSwitchCase="'red'">
+        El color popular es <span [ngStyle]="{'background':color}">rojo</span>
+    </li>
+    <li *ngSwitchCase="'blue'">
+        El color popular es <span [ngStyle]="{'background':color}">azul</span>
+    </li>
+    <li *ngSwitchCase="'orange'">
+        El color popular es <span [ngStyle]="{'background':color}">naranja</span>
+    </li>
+</ul>
