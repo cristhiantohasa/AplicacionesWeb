@@ -1,1 +1,11 @@
 <p>externo works!</p>
+<input type="text" [(ngModel)]="userId" (keyup.enter)="cargarUsuario()">
+<div *ngIf="user">
+    <h2>{{user.first_name | uppercase}}</h2>
+    <h2>{{user.last_name + " - " + user.email}}</h2>
+    <img src="{{user.avatar}}" alt="">
+</div>
+<h2>Fecha {{fecha}}</h2>
+<h2>{{fecha | date:'dd/MM/yyyy'}}</h2>
+<h2>{{fecha | date:'fullDate' | uppercase}}</h2>
+<h2>{{fecha | date:'fullDate' | lowercase}}</h2>
