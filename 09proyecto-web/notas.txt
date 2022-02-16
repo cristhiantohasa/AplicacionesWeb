@@ -1,0 +1,56 @@
+1. Desarrollo MEAN stack (Mongo, Express, Angular, Node).
+
+2. MongoDB - Tipo de base de datos no SQL.
+
+	○ SQL	
+
+		§ Relacionales
+		§ Tablas
+		§ Esquemas	
+
+	○ No SQL
+
+		§ No relacionales
+		§ Javascript
+		§ Orienbtadas a colecciones de documentos (json, bson) en mongo es binary json
+		§ Sencillez
+		§ Velocidad
+		§ Esquema sea libre	
+
+3. NodeJS
+
+    ○ Javascript en el servidor
+    ○ Conexión a BDD
+    ○ Conexión al servidor
+    ○ Crear un servidor
+    ○ Modelos
+    ○ Establecer controladores y rutas
+    ○ Subir archivos
+    ○ Postman
+
+4. API RESTful
+
+    ○ API Node es un servicio que nos permite recibir peticiones HTTP y devolver un json
+    ○ El servicio lo puede consumir cualquier dispositivo o app que entienda el protocolo HTTP.
+
+Para ejecutar un archivo js por terminal
+
+	Node nombreArchivo.js
+
+Creacion de proyecto con NodeJS
+
+	• npm init: Aquí llenamos los datos de nuestro proyecto y se genera el archivo package.jason
+	• Agregamos dependencias y paquetes a nuestro proyecto express que es el servidor, nos permitirá recibir rutas, recibir peticiones.
+	• --save: Para que la dependencia se guarde en nuestro proyecto.
+	• npm install express --save
+	• Otro paquete es body-parser para convertir nuestras peticiones de backend en json.
+	• npm install body-parser --save
+	• Otro que agregamos es el de manejo de archivos para subir archivos, imágenes.
+	• npm install connect-multiparty --save
+	• Para trabajar con mongodb instalar mongoose.
+	• npm install mongoose --save
+	• Vamos a instalar una que permite refrescar el servidor.
+	• npm install nodemon --save-dev
+	• Creamos el index.js y agregamos en package.json el start para el nodemon.
+	• "start":" nodemon index.js"
+	• Cada vez que lanze npm start se lanza el nodemon que carga el index.js.
