@@ -1,0 +1,26 @@
+<header>
+  <h1>Concesionario del Valle</h1>
+</header>
+<nav id="nav">
+  <ul>
+    <li>
+      <a [routerLink]="['/autos']">
+        Autos
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/guardar-auto']">
+        Guardar Auto
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/contacto']">
+        Contacto
+      </a>
+    </li>
+  </ul>
+</nav>
+<div id="content">
+  <router-outlet></router-outlet>
+</div>
+<footer>Concesionario del Valle &copy;</footer>

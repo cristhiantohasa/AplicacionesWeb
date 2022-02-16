@@ -1,6 +1,8 @@
 'use strict'
 
 var Auto = require( "../models/auto" );
+var path = require( "path" );
+var fs = require( "fs" );
 
 var controller = {
     /* router.get( '/', ( req, res ) => {

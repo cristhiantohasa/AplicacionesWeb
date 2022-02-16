@@ -54,3 +54,17 @@ Creacion de proyecto con NodeJS
 	• Creamos el index.js y agregamos en package.json el start para el nodemon.
 	• "start":" nodemon index.js"
 	• Cada vez que lanze npm start se lanza el nodemon que carga el index.js.
+
+Conexión backend con frontend
+
+	Procedemos a crear el proyecto frontend en Angular.
+	
+		○ ng new concesionario
+	
+	Creamos los componentes en la carpeta components
+	
+		○ ng g c components/autos
+		○ ng g c components/contacto
+		○ ng g c components/createauto
+		○ ng g c components/detalleauto
+		○ ng g c components/editarauto
