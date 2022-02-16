@@ -1,6 +1,9 @@
 <h2>Autos</h2>
 <ul>
     <li *ngFor="let auto of autos">
-        {{auto.fabricante}}
+        <a [routerLink]="['/auto',auto._id]">
+            <img src="{{url+'get-imagen/'+auto.imagen}}" *ngIf="auto.imagen">
+            <h3>{{auto.fabricante}} - {{auto.modelo}}</h3>
+        </a>
     </li>
 </ul>
