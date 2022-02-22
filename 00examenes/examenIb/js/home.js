@@ -19,12 +19,32 @@ $( document ).ready( function(){
     } );
 } );
 
-const xhttp = new XMLHttpRequest();
-xhttp.open( 'GET', '../jason/articles.json', true );
+var xhttp = new XMLHttpRequest();
+xhttp.open( 'POST', '../json/articles.json', true );
 xhttp.send();
 xhttp.onreadystatechange = function(){
     if( this.readyState == 4 && this.status == 200 ){
-        console.log( this.responseText );
+        let data = JSON.parse( this.responseText );
+        let res = document.querySelector('.article-div');
+        res.innerHTML = '';
+        for( let i of data ){
+          res.innerHTML += `
+            <div>
+              <h2>
+                ${i.titulo}
+              </h2>
+              <span>
+                ${i.fecha}
+              </span>
+              <p>
+                ${i.contenido}
+              </p>
+              <button>
+                Leer más...
+              </button>
+            </div>
+            <br>
+          `
+        }
     }
 }
-  

@@ -9,7 +9,7 @@ a {
 }
 
 body {
-    background-image: url("../img/fondo3.jpg");
+    background-image: url("../img/fondo1.jpeg");
     color: white;
 }
 
@@ -19,7 +19,7 @@ div.transbox {
 }
 
 h2 {
-    color: orange;
+    color: orangered;
 }
 
 .menu {

@@ -59,3 +59,22 @@ a {
     margin-left: -50px;
     background-color: rgb(255, 255, 255, 0.3);
 }
+
+/*
+    Article
+*/
+
+.article-div h2 {
+    color: orangered;
+}
+
+.article-div span {
+    font-size: small;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.article-div button {
+    padding: 5px;
+    background-color: blue;
+    color: white;
+}

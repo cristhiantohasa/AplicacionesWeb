@@ -48,6 +48,7 @@
                     </table>
                 </div>
             </nav>
+            <!--Slider-->
             <section class="slider row">
                 <div class="slider-div">
                     <img src="../img/arrow-izq.png" alt="left" class="left">
@@ -59,17 +60,65 @@
                     <img src="../img/arrow-der.png" alt="right" class="right">
                 </div>
             </section>
-            <section class="row">
-                <div class="article-div">
-                    
-                </div>
-            </section>
-
-
+            <div class="row">
+                <!--Article-->
+                <section class="col-lg-8">
+                    <div class="article-div">
+                    </div>
+                </section>
+                <!--Login-->
+                <aside class="col-lg-4">
+                    <div class="aside-div">
+                        <h3 class="text-center">
+                            Quien soy
+                        </h3>
+                        <div class="text-center">
+                            <img src="../img/user.jpg" alt="user">
+                        </div>
+                        <p class="text-center">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quo deleniti, iusto facere dolores, molestiae id hic facilis ex incidunt sapiente consequatur totam nesciunt vero quasi? Exercitationem nemo quaerat quidem?
+                        </p>
+                        <h3 class="text-center">
+                            Identificate
+                        </h3>
+                        <form action="" id="user">
+                            <div id="user-name">
+                                <label for="name">Nombre</label>
+                                <br>
+                                <input class="user-input" type="text" name="name">
+                            </div>
+                            <div id="user-email">
+                                <label for="email">Correo</label>
+                                <br>
+                                <input class="user-input" type="text" name="email">
+                            </div>
+                            <div id="user-password">
+                                <label for="password">Contraseña</label>
+                                <br>
+                                <input class="user-input" type="password" name="password">
+                            </div>
+                            <div class="field">
+                                <button class="button-submit" type="submit">Entrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+            <!--Social Bar-->
+            <div class="social-bar">
+                <a href="https://www.facebook.com/nilzmiler" class="icon icon-facebook" target="_blank"></a>
+                <a href="https://www.twitter.com/nilzmiler" class="icon icon-twitter" target="_blank"></a>
+                <a href="https://www.youtube.com/c/NilzZmiler" class="icon icon-youtube" target="_blank"></a>
+                <a href="https://www.instagram.com/nilzmiler" class="icon icon-instagram" target="_blank"></a>
+            </div>
+            <!--Theme Bar-->
+            <div class="theme-bar">
+                <a href="#" class="icon theme1"></a>
+                <a href="#" class="icon theme2"></a>
+                <a href="#" class="icon theme3"></a>
+            </div>
         </div>
         <div class="col-lg-2"></div>
-        <script src="../js/home.js"></script>
-        <script src="../js/home.js"></script>
     </div>
     <br>
     <!--Footer-->
@@ -86,11 +135,13 @@
                     CFTP
                 </div>
                 <div class="col-lg-4 text-end">
-                    Ir arriba
+                    <a href="#" class="top">Ir arriba</a>
                 </div>
             </footer>
         </div>
         <div class="col-lg-2"></div>
     </div>
+    <script src="../js/common.js"></script>
+    <script src="../js/home.js"></script>
 </body>
 </html>

@@ -36,6 +36,12 @@ header.row {
 
 .header-div {
     height: 50px;
+    background-color: orangered;
+    color: white;
+}
+
+.header-div .theme1{
+    height: 50px;
     background-color: blue;
     color: white;
 }
@@ -54,15 +60,112 @@ nav.row {
 
 .nav-div {
     height: 50px;
+    background-color: lightblue;
+}
+
+.nav-div td:hover {
+    background-color: orangered;
+}
+
+.nav-div a {
+    color: black;
+    text-decoration: none;
+}
+
+/*
+    Login
+*/
+
+.aside-div h3 {
+    background-color: white;
+    color: black;
+}
+
+.aside-div button {
     background-color: blue;
     color: white;
 }
 
-.nav-div td:hover {
-    background-color: lightskyblue;
+.field {
+    padding-top: 5px;
 }
 
-.nav-div a {
+/*
+    Brra de redes
+*/
+
+.social-bar {
+	display: flex;
+	position: fixed;
+	top: 15%;
+	right: 0;
+	font-size: 1.5rem;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+}
+
+.icon {
+	display: flex;
+	padding: .7rem;
+	color: white;
+	text-decoration: none;
+	transition: all .5s;
+}
+
+.icon-facebook {
+	background: #4267B2;
+}
+
+.icon-twitter {
+	background: #1DA1F2;
+}
+
+.icon-youtube {
+	background: #FF0000;
+}
+
+.icon-instagram {
+	background: #405DE6;
+}
+
+.icon:hover {
+	padding-right: 5rem;
+	box-shadow: 0 0 .5rem black;
+}
+
+/*
+    Barra de temas
+*/
+
+.theme-bar {
+	display: flex;
+	position: fixed;
+	top: 15%;
+	left: 0;
+	font-size: 1.5rem;
+	flex-direction: column;
+	align-items: flex-start;
+	z-index: 100;
+}
+
+.theme1 {
+	background: lightblue;
+}
+
+.theme2 {
+	background: red;
+}
+
+.theme3 {
+	background: blue;
+}
+
+/*
+    Footer
+*/
+
+footer a {
     color: white;
     text-decoration: none;
 }

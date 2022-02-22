@@ -1,23 +1,36 @@
-$(document).ready(function(){
-    $('.accordion_box:first').addClass('active');
-    $('.accordion_box:first').children('.acc_trigger').children('i').addClass('fa-minus-circle');
-    $('.accordion_box:first').children('.acc_trigger').addClass('selected').next('.acc_container').show();
-  
-    $('.acc_trigger').click(function(event){
-      if($(this).hasClass('selected')) {
-        $(this).removeClass('selected');
-        $(this).children('i').removeClass('fa-minus-circle');
-        $(this).next().slideUp();
-        $(this).parent().removeClass('active');
-      }else{
-        $('.acc_trigger').removeClass('selected');
-        $(this).addClass('selected');
-        $('.acc_trigger').children('i').removeClass('fa-minus-circle');
-        $(this).children('i').addClass('fa-minus-circle');
-        $('.acc_trigger').next().slideUp();
-        $(this).next().slideDown();
-        $('.accordion_box').removeClass('active');
-        $(this).parent().addClass('active');
-      }
-    });
-  });
+'use strict'
+
+let title1 = document.querySelector('.title1');
+let title2 = document.querySelector('.title2');
+let title3 = document.querySelector('.title3');
+
+$( document ).ready( function(){
+  $( '.accordion1, .accordion2, .accordion3' ).hide();
+  $( '.title1' ).on( 'click', function(){
+    $( '.accordion1 ' ).slideToggle();
+    title1.style.backgroundColor = "blue";
+    title2.style.backgroundColor = "white";
+    title3.style.backgroundColor = "white";
+    title1.style.color = "white";
+    title2.style.color = "black";
+    title3.style.color = "black";
+  } );
+  $( '.title2' ).on( 'click', function(){
+    $( '.accordion2 ' ).slideToggle();
+    title1.style.backgroundColor = "white"
+    title2.style.backgroundColor = "blue"
+    title3.style.backgroundColor = "white"
+    title1.style.color = "black";
+    title2.style.color = "white";
+    title3.style.color = "black";
+  } );
+  $( '.title3' ).on( 'click', function(){
+    $( '.accordion3 ' ).slideToggle();
+    title1.style.backgroundColor = "white"
+    title2.style.backgroundColor = "white"
+    title3.style.backgroundColor = "blue"
+    title1.style.color = "black";
+    title2.style.color = "black";
+    title3.style.color = "white";
+  } );
+} );
