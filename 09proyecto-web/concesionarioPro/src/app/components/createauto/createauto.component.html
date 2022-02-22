@@ -1,0 +1,69 @@
+<div class="container" *ngIf="auto">
+<h2>{{titulo}}</h2>
+<div class="message success" *ngIf="status=='success'">
+    El auto se ha guardado correctamente, puedes verlo <a [routerLink]="['/auto',idGuardado]">aquí</a>.
+  </div>
+  <div class="message failed" *ngIf="status=='failed'">
+    El auto no se ha podido guardar.
+  </div>
+<form #autoForm="ngForm" (ngSubmit)="guardarAuto(autoForm)">
+    <p>
+        <label for="fabricante">
+            Fabricante
+        </label>
+        <input type="text" name="fabricante" #fabricante="ngModel" [(ngModel)]="auto.fabricante" required/>
+        <span *ngIf="fabricante.touched && !fabricante.valid">
+            Fabricante obligatorio
+        </span>
+    </p>
+    <p>
+        <label for="modelo">
+            Modelo
+        </label>
+        <input type="text" name="modelo" #modelo="ngModel" [(ngModel)]="auto.modelo" required/>
+        <span *ngIf="modelo.touched && !modelo.valid">
+            Modelo obligatorio
+        </span>
+    </p>
+    <p>
+        <label for="color">
+            Color
+        </label>
+        <input type="text" name="color" #color="ngModel" [(ngModel)]="auto.color" required/>
+        <span *ngIf="color.touched && !color.valid">
+            Color obligatorio
+        </span>
+    </p>
+    <p>
+        <label for="matricula">
+            Matrícula
+        </label>
+        <input type="text" name="matricula" #matricula="ngModel" [(ngModel)]="auto.matricula" required/>
+        <span *ngIf="matricula.touched && !matricula.valid">
+            Matrícula obligatorio
+        </span>
+    </p>
+    <p>
+        <label for="anio">
+            Año
+        </label>
+        <input type="number" name="anio" #anio="ngModel" [(ngModel)]="auto.anio" required/>
+    </p>
+    <p>
+        <label for="precio">
+            Precio
+        </label>
+        <input type="number" name="precio" #precio="ngModel" [(ngModel)]="auto.precio" required/>
+    </p>
+    <p>
+        <label for="imagen">
+            Imagen
+        </label>
+        <span *ngIf="auto.imagen" style="float: none;">
+            <img src="{{url+'get-imagen/'+auto.imagen}}" style="width: 100px;">
+        </span>
+        <input type="file" #archivoImagen placeholder="Seleccionar imagen" (change)="imagenChangeEvent($event)">
+    </p>
+    <input type="submit" value="Guardar" [disabled]="!autoForm.form.valid">
+</form>
+</div>
