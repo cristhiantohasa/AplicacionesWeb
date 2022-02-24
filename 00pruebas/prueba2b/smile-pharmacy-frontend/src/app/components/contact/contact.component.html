@@ -1,0 +1,62 @@
+<!--Contact-->
+<section class="contact row">
+    <!--Title-->
+    <div class="title col-lg-12 row">
+        <h2 class="text-center">Contácto</h2>
+    </div>
+    <!--Image-->
+    <div class="image col-lg-6 row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center">
+            <img src="../../../assets/img/contact.jpg" alt="user">
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <!--Form-->
+    <div class="form col-lg-6 row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <form #userForm="ngForm" (ngSubmit)="contact(userForm)">
+                <div class="text-start">
+                    <label for="name">Nombre</label>
+                    <input required #name="ngModel" class="form-control" name="name" type="text" placeholder="Ingresar nombre" [(ngModel)]="user.name">
+                    <span *ngIf="name.touched && !name.valid">Nombre Requerido</span>
+                </div>
+                <div class="text-start">
+                    <label for="lastName">Apellido</label>
+                    <input required #lastName="ngModel" class="form-control" name="lastName" type="text" placeholder="Ingresar apellido" [(ngModel)]="user.lastName">
+                    <span *ngIf="lastName.touched && !lastName.valid">Apellido Requerido</span>
+                </div>
+                <div class="text-start">
+                    <label for="email">Correo</label>
+                    <input required #email="ngModel" class="form-control" name="email" type="text" placeholder="Ingresar correo" [(ngModel)]="user.email">
+                    <span *ngIf="email.touched && !email.valid">Correo Requerido</span>
+                </div>
+                <br>
+                <div class="text-center">
+                    <input type="submit" value="Enviar" [disabled]="!userForm.form.valid">
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</section>
+<hr>
+
+<!--Direction-->
+<section class="direction row">
+    <!--Title-->
+    <div class="title row">
+        <h2 class="text-center">Dirección</h2>
+    </div>
+    <!--Map-->
+    <div class="map row">
+        <div class="text-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d373.90479386717027!2d-78.5835890090405!3d-0.28023574502109255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59f43feb3cdc5%3A0x3cf07ce25f8dc770!2sPC98%2BXJH%2C%20Quito%20170105!5e1!3m2!1ses!2sec!4v1645673022809!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <!--Street-->
+    <div class="street row">
+        <span class="text-center">Calle OE14J y Calle 8</span>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+<!--Slider-->
+<section class="slider row">
+    <!--Title-->
+    <div class="title col-lg-12 row">
+        <h2 class="text-center">Visítanos</h2>
+    </div>
+    <!--Carousel-->
+    <div class="carousel col-lg-12 row">
+        <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let pharmacy of Pharmacys">
+                <div class="picsum-img-wrapper">
+                    <img [src]="pharmacy.image" alt="pharmacy">
+                </div>
+                <div class="carousel-caption">
+                    <h3>{{ pharmacy.name }}</h3>
+                    <p>{{ pharmacy.description }}</p>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</section>
+<hr>
+
+<!--Promotion-->
+<section class="promotion row">
+    <!--Title-->
+    <div class="title col-lg-12 row">
+        <h2 class="text-center">Promociones</h2>
+    </div>
+    <!--Products-->
+    <div class="products col-lg-4 row" *ngFor="let product of products">
+        <div class="text-center">
+            <img [src]="url+'read-image/'+product.imagen" alt="product">
+        </div>
+        <div class="text-center">
+            <h3>{{ product.nombre }}</h3>
+            <span>${{ product.precio }}</span>
+        </div>
+    </div>        
+</section>

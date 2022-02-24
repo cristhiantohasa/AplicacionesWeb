@@ -1,0 +1,31 @@
+/*
+    Reset
+*/
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    Slider
+*/
+
+.slider .carousel img{
+    width: 100%;
+    height: 500px;
+}
+
+.slider .carousel .carousel-caption {
+    background-color: rgb(173, 216, 230, 0.7);
+    color: blue;
+}
+
+/*
+    Promotion
+*/
+
+.promotion img{
+    width: 100%;
+    height: 300px;
+}

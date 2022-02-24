@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Sucursales",
+        "description": "Contamos com más de 100 sucursales alrededor de todo el país.",
+        "image": "assets/img/farmacias01.jpg"
+    },
+    {
+        "name": "Productos",
+        "description": "Contamos con productos de primera calidad y al mejor precio.",
+        "image": "assets/img/farmacias02.jpg"
+    },
+    {
+        "name": "Atención",
+        "description": "Contamos con los mejores asesores capacitados para poder brindar la mejor atención.",
+        "image": "assets/img/farmacias03.jpg"
+    }
+]

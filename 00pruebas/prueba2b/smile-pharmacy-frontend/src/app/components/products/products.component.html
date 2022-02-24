@@ -1,0 +1,137 @@
+<!--Search-->
+<section class="search row">
+    <!--Title-->
+    <div class="title col-lg-12 row">
+        <h2 class="text-center">Buscar</h2>
+    </div>
+    <!--Textbox-->
+    <div class="textbox col-lg-12 row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input #nombre type="text" class="form-control" placeholder="Ingresa el nombre del producto">
+                <button class="btn btn-outline-secondary" type="button" (click)="readProduct()">Buscar</button>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <!--Result-->
+    <div class="result col-lg-12 row" *ngIf="searchProduct.nombre">
+        <!--Image-->
+        <div class="product col-lg-6 row">
+            <div class="text-center">
+                <img [src]="url+'read-image/'+searchProduct.imagen" alt="product">
+            </div>
+        </div>
+        <!--Product-->
+        <div class="product col-lg-6 row" *ngIf="user">
+            <!--Title-->
+            <div class="title col-lg-12 row">
+                <h2 class="text-center">{{ searchProduct.nombre }}</h2>
+            </div>
+            <!--Form-->
+            <div class="form col-lg-12 row">
+                <form #productForm="ngForm">
+                    <div class="text-start">
+                        <label for="name">Nombre</label>
+                        <input required #nombre="ngModel" class="form-control" name="nombre" type="text" placeholder="Nombre del producto" [(ngModel)]="searchProduct.nombre">
+                        <span *ngIf="nombre.touched && !nombre.valid">Nombre Requerido</span>
+                    </div>
+                    <div class="text-start">
+                        <label for="price">Precio</label>
+                        <input required #precio="ngModel" type="text" name="precio" class="form-control" placeholder="Precio del producto" [(ngModel)]="searchProduct.precio">
+                        <span *ngIf="nombre.touched && !nombre.valid">Precio Requerido</span>
+                    </div>
+                    <div class="text-start">
+                        <label for="size">Cantidad</label>
+                        <input required #cantidad="ngModel" type="text" name="cantidad" class="form-control" placeholder="Cantidad del producto" [(ngModel)]="searchProduct.cantidad">
+                        <span *ngIf="nombre.touched && !nombre.valid">Cantidad Requerida</span>
+                    </div>
+                    <div class="text-start">
+                        <label for="promotion">Promoción</label>
+                        <input required #promotion="ngModel" type="text" name="promocion" class="form-control" placeholder="Promocion del producto" [(ngModel)]="searchProduct.promocion">
+                        <span *ngIf="nombre.touched && !nombre.valid">Promocion Requerida</span>
+                    </div>
+                    <div class="text-start">
+                        <label for="imagen">Imagen</label>
+                        <input #image type="file" class="form-control" id="inputGroupFile02" (change)="imageChangeEvent($event)">
+                    </div>
+                    <br>                    
+                </form>
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <input type="submit" class="form-control" value="Actualizar" [disabled]="!productForm.form.valid" (click)="updateProduct(productForm)">
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <input type="submit" class="form-control" value="Eliminar" [disabled]="!productForm.form.valid" (click)="deleteProduct(productForm)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+
+<!--Products-->
+<section class="products row">
+    <!--Title-->
+    <div class="title col-lg-12 row">
+        <h2 class="text-center">Productos</h2>
+    </div>
+    <!--Product-->
+    <div class="product col-lg-4 row" *ngFor="let product of products">
+        <div class="text-center">
+            <img [src]="url+'read-image/'+product.imagen" alt="product">
+        </div>
+        <div class="text-center">
+            <h3>{{ product.nombre }}</h3>
+            <span>${{ product.precio }}</span>
+        </div>
+    </div>
+</section>
+<hr>
+
+<!--Create-->
+<section class="create row" *ngIf="user">
+    <!--Title-->
+    <div class="title col-lg-12 row">
+        <h2 class="text-center">Crear Producto</h2>
+    </div>
+    <!--Form-->
+    <div class="form col-lg-12 row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <form #productForm="ngForm" (ngSubmit)="createProduct(productForm)">
+                <div class="text-start">
+                    <label for="name">Nombre</label>
+                    <input required #nombre="ngModel" class="form-control" name="nombre" type="text" placeholder="Nombre del producto" [(ngModel)]="product.nombre">
+                    <span *ngIf="nombre.touched && !nombre.valid">Nombre Requerido</span>
+                </div>
+                <div class="text-start">
+                    <label for="price">Precio</label>
+                    <input required #precio="ngModel" type="text" name="precio" class="form-control" placeholder="Precio del producto" [(ngModel)]="product.precio">
+                    <span *ngIf="nombre.touched && !nombre.valid">Precio Requerido</span>
+                </div>
+                <div class="text-start">
+                    <label for="size">Cantidad</label>
+                    <input required #cantidad="ngModel" type="text" name="cantidad" class="form-control" placeholder="Cantidad del producto" [(ngModel)]="product.cantidad">
+                    <span *ngIf="nombre.touched && !nombre.valid">Cantidad Requerida</span>
+                </div>
+                <div class="text-start">
+                    <label for="promotion">Promoción</label>
+                    <input required #promotion="ngModel" type="text" name="promocion" class="form-control" placeholder="Promocion del producto" [(ngModel)]="product.promocion">
+                    <span *ngIf="nombre.touched && !nombre.valid">promocion Requerida</span>
+                </div>
+                <div class="text-start">
+                    <label for="imagen">Imagen</label>
+                    <input #image type="file" class="form-control" id="inputGroupFile02" (change)="imageChangeEvent($event)">
+                </div>
+                <br>
+                <div class="text-center">
+                    <input type="submit" value="Crear" class="form-control" [disabled]="!productForm.form.valid">
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</section>

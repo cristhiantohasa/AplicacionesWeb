@@ -1,0 +1,39 @@
+<!--Header-->
+<header class="header row">
+    <!--Logo-->
+    <div class="logo col-lg-4">
+        <img src="../../../../assets/img/smile.png" alt="smile">
+    </div>
+    <!--Title-->
+    <div class="title col-lg-6">
+        <h1 class="text-center">SMILE PHAMARCY</h1>
+    </div>
+    <!--User-->
+    <div class="user col-lg-2">
+        <div class="text-center">
+            <img src="../../../../assets/img/user.png" alt="user">
+            <br>
+            <span *ngIf="user">{{ user }}</span>
+            <span *ngIf="!user">Login</span>
+        </div>
+        <div class="text-center" *ngIf="user">
+            <button class="btn btn-outline-secondary" type="button" (click)="logout()">Cerrar Sesión</button>
+        </div>
+    </div>
+</header>
+<!--Nav-->
+<nav class="nav row">
+    <div class="nav-div col-lg-12 row">
+        <a class="col-lg-3 text-center" [routerLink]="['/home']">INICIO</a>
+        <a class="col-lg-3 text-center" [routerLink]="['/products']">PRODUCTOS</a>
+        <div class="col-lg-3 text-center">
+            <a class="text-center" [routerLink]="['./login']">
+                INICIAR SESIÓN
+            </a>
+            <a class="text-center" [routerLink]="['./signin']">
+                CREAR CUENTA
+            </a>
+        </div>
+        <a class="col-lg-3 text-center" [routerLink]="['./contact']">CONTÁCTO</a>
+    </div>
+</nav>
